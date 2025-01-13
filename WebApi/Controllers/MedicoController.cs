@@ -24,13 +24,30 @@ namespace WebApi.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<Medico>>> GetMedicos()
+        public async Task<ActionResult<Paginacion<MedicoDTO>>> GetMedicos([FromQuery]MedicoSpecificationParams medicoParams)
         {
-            var spec = new MedicosActivosSpecification();
+            var spec = new MedicosGetAllSpecification(medicoParams);
             var medicos = await _medicoRepository.GetAllWithSpec(spec);
 
+            var specContar = new MedicosForCountingSpecification(medicoParams);
+            var totalMedicos =  await _medicoRepository.CountAsync(specContar);
 
-            return Ok(_mapper.Map<IReadOnlyList<Medico>, IReadOnlyList<MedicoDTO>>(medicos));
+            var redondeo = Math.Ceiling(Convert.ToDecimal(totalMedicos / medicoParams.PageSize));
+            var totalPaginas = Convert.ToInt32(redondeo);
+
+            var data = _mapper.Map<IReadOnlyList<Medico>, IReadOnlyList<MedicoDTO>>(medicos);
+
+            return Ok
+                (
+                    new Paginacion<MedicoDTO>
+                    {
+                        Count = totalMedicos,
+                        Data = data,
+                        CantidadPaginas = totalPaginas,
+                        PageIndex = medicoParams.pageIndex,
+                        PageSize = medicoParams.PageSize
+                    }
+                );
         }
 
         [HttpGet("{IdMedico}")]

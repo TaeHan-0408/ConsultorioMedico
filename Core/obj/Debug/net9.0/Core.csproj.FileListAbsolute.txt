@@ -5,6 +5,7 @@ C:\Users\M\OneDrive\Escritorio\ConsultorioMedico\ConsultorioMedico\Core\obj\Debu
 C:\Users\M\OneDrive\Escritorio\ConsultorioMedico\ConsultorioMedico\Core\obj\Debug\net9.0\Core.AssemblyInfoInputs.cache
 C:\Users\M\OneDrive\Escritorio\ConsultorioMedico\ConsultorioMedico\Core\obj\Debug\net9.0\Core.AssemblyInfo.cs
 C:\Users\M\OneDrive\Escritorio\ConsultorioMedico\ConsultorioMedico\Core\obj\Debug\net9.0\Core.csproj.CoreCompileInputs.cache
+C:\Users\M\OneDrive\Escritorio\ConsultorioMedico\ConsultorioMedico\Core\obj\Debug\net9.0\Core.sourcelink.json
 C:\Users\M\OneDrive\Escritorio\ConsultorioMedico\ConsultorioMedico\Core\obj\Debug\net9.0\Core.dll
 C:\Users\M\OneDrive\Escritorio\ConsultorioMedico\ConsultorioMedico\Core\obj\Debug\net9.0\refint\Core.dll
 C:\Users\M\OneDrive\Escritorio\ConsultorioMedico\ConsultorioMedico\Core\obj\Debug\net9.0\Core.pdb

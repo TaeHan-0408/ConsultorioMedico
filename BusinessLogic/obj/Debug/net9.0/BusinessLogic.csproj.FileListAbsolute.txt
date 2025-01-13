@@ -1,4 +1,5 @@
 C:\Users\M\OneDrive\Escritorio\ConsultorioMedico\ConsultorioMedico\BusinessLogic\bin\Debug\net9.0\BusinessLogic.deps.json
+C:\Users\M\OneDrive\Escritorio\ConsultorioMedico\ConsultorioMedico\BusinessLogic\bin\Debug\net9.0\BusinessLogic.runtimeconfig.json
 C:\Users\M\OneDrive\Escritorio\ConsultorioMedico\ConsultorioMedico\BusinessLogic\bin\Debug\net9.0\BusinessLogic.dll
 C:\Users\M\OneDrive\Escritorio\ConsultorioMedico\ConsultorioMedico\BusinessLogic\bin\Debug\net9.0\BusinessLogic.pdb
 C:\Users\M\OneDrive\Escritorio\ConsultorioMedico\ConsultorioMedico\BusinessLogic\bin\Debug\net9.0\Core.dll
@@ -8,10 +9,10 @@ C:\Users\M\OneDrive\Escritorio\ConsultorioMedico\ConsultorioMedico\BusinessLogic
 C:\Users\M\OneDrive\Escritorio\ConsultorioMedico\ConsultorioMedico\BusinessLogic\obj\Debug\net9.0\BusinessLogic.AssemblyInfoInputs.cache
 C:\Users\M\OneDrive\Escritorio\ConsultorioMedico\ConsultorioMedico\BusinessLogic\obj\Debug\net9.0\BusinessLogic.AssemblyInfo.cs
 C:\Users\M\OneDrive\Escritorio\ConsultorioMedico\ConsultorioMedico\BusinessLogic\obj\Debug\net9.0\BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\M\OneDrive\Escritorio\ConsultorioMedico\ConsultorioMedico\BusinessLogic\obj\Debug\net9.0\BusinessLogic.sourcelink.json
 C:\Users\M\OneDrive\Escritorio\ConsultorioMedico\ConsultorioMedico\BusinessLogic\obj\Debug\net9.0\Business.CF5D6E35.Up2Date
 C:\Users\M\OneDrive\Escritorio\ConsultorioMedico\ConsultorioMedico\BusinessLogic\obj\Debug\net9.0\BusinessLogic.dll
 C:\Users\M\OneDrive\Escritorio\ConsultorioMedico\ConsultorioMedico\BusinessLogic\obj\Debug\net9.0\refint\BusinessLogic.dll
 C:\Users\M\OneDrive\Escritorio\ConsultorioMedico\ConsultorioMedico\BusinessLogic\obj\Debug\net9.0\BusinessLogic.pdb
-C:\Users\M\OneDrive\Escritorio\ConsultorioMedico\ConsultorioMedico\BusinessLogic\obj\Debug\net9.0\ref\BusinessLogic.dll
-C:\Users\M\OneDrive\Escritorio\ConsultorioMedico\ConsultorioMedico\BusinessLogic\bin\Debug\net9.0\BusinessLogic.runtimeconfig.json
 C:\Users\M\OneDrive\Escritorio\ConsultorioMedico\ConsultorioMedico\BusinessLogic\obj\Debug\net9.0\BusinessLogic.genruntimeconfig.cache
+C:\Users\M\OneDrive\Escritorio\ConsultorioMedico\ConsultorioMedico\BusinessLogic\obj\Debug\net9.0\ref\BusinessLogic.dll

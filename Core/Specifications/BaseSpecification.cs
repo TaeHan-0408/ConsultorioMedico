@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq.Expressions;
 
 namespace Core.Specifications
 {
-    public class BaseSpecification<T> :ISpecification<T>
+    public class BaseSpecification<T> : ISpecification<T>
     {
         public BaseSpecification()
         {
@@ -26,7 +21,7 @@ namespace Core.Specifications
             Includes.Add(includeExpression);
         }
 
-        public Expression<Func<T, object>> OrderBy { get;  private set; }
+        public Expression<Func<T, object>> OrderBy { get; private set; }
 
         public Expression<Func<T, object>> OrderByDescending { get; private set; }
 
@@ -39,6 +34,18 @@ namespace Core.Specifications
         {
             OrderByDescending = orderByDescExpression;
 
+        }
+
+        public int Take { get; private set; }
+
+        public int Skip { get; private set; }
+
+        public bool paginaHabilitada { get; private set; }
+        protected void AplicarPaginado(int take, int skip)
+        {
+            Skip = skip;
+            Take = take;
+            paginaHabilitada = true;
         }
     }
 }
