@@ -17,7 +17,8 @@ namespace Core.Specifications
             )
         {
 
-            AplicarPaginado(medicoParams.PageSize * (medicoParams.PageSize - 1), medicoParams.PageSize);
+            AplicarPaginado(medicoParams.PageSize, medicoParams.PageSize * (medicoParams.pageIndex - 1));
+            //AplicarPaginado(medicoParams.PageSize * (medicoParams.PageSize - 1), medicoParams.PageSize); -> El error...
 
             if (!string.IsNullOrEmpty(medicoParams.Sort))
             {

@@ -25,7 +25,7 @@ builder.Services.AddTransient<ITiposImagenRepository, TiposImagenRepository>();
 
 builder.Services.AddControllers();
 
-var app = builder.Build();
+var app = builder.Build(); //Building the app after everything's created due to an error because service collection cannot be modified because its read-only.
 
 // Configure the HTTP request pipeline.
 app.UseAuthorization();
