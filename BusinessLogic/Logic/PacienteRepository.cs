@@ -3,21 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BusinessLogic.Data;
 using Core.Entities;
 using Core.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace BusinessLogic.Logic
 {
     public class PacienteRepository : IPacienteRepository
     {
-        public Task<Paciente> GetPacienteByIdAsync(int IdMedico)
+        private readonly ConsultorioDbContext _context;
+        public PacienteRepository(ConsultorioDbContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
+        }
+        public async Task<Paciente> GetPacienteByIdAsync(int IdPaciente)
+        {
+            return await _context.Paciente.FindAsync(IdPaciente);
+            //.Include(c => c.Citas)
+            //.FirstOrDefaultAsync(m => m.IdMedico == IdMedico);
         }
 
-        public Task<IReadOnlyList<Paciente>> GetPacientesAsync()
+        public async Task<IReadOnlyList<Paciente>> GetPacientesAsync()
         {
-            throw new NotImplementedException();
+            return await _context.Paciente.ToListAsync();
+            //.Include(c => Citas)
+            //.ToListAsync();
         }
     }
 }

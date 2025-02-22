@@ -2,6 +2,7 @@ using BusinessLogic.Data;
 using BusinessLogic.Logic;
 using Core.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using WebApi.DTOs;
 using WebApi.Middleware;
 
@@ -24,10 +25,18 @@ builder.Services.AddTransient<IPacienteRepository, PacienteRepository>();
 builder.Services.AddTransient<ITiposImagenRepository, TiposImagenRepository>();
 
 builder.Services.AddControllers();
+builder.Services.AddCors(opt =>
+{
+    opt.AddPolicy("CorsRule", rule =>
+    {
+        rule.AllowAnyHeader().AllowAnyMethod().WithOrigins("*");
+    });
+});
 
 var app = builder.Build(); //Building the app after everything's created due to an error because service collection cannot be modified because its read-only.
 
-// Configure the HTTP request pipeline.
+app.UseCors("CorsRule");
+
 app.UseAuthorization();
 
 app.MapControllers();

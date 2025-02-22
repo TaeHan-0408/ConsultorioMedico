@@ -1,16 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿#nullable disable
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 
 namespace Core.Entities
 {
-    public class Citas
+    [Table("Citas")]
+    public class Cita : ClaseBase
     {
+        [Key]
         public int IdCita { get; set; }
-        public int IdPaciente { get; set; } //Me va a tocar llamar con la clase de Paciente luego
-        public int IdMedico { get; set; } //Lo mismo que arriba
+        public int IdPaciente { get; set; }
+        public int IdMedico {get; set;}
         public bool PrimeraVez { get; set; }
         public string Motivo { get; set; }
         public string DescripcionDiagnostico {  get; set; }
@@ -22,5 +23,11 @@ namespace Core.Entities
         public DateTime FechaCreacionCita { get; set; }
         public DateTime CitaModificacion { get; set; }
         public DateTime FechaModificacionCita { get; set; }
+
+        [ForeignKey(nameof(IdPaciente))]
+        public virtual Paciente Paciente {get;set;}
+
+        [ForeignKey(nameof(IdMedico))]
+        public virtual Medico Medico { get; set; }
     }
 }

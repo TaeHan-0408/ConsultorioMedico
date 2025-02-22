@@ -9,8 +9,8 @@ namespace Core.Interfaces
 {
     public interface ICitasRepository
     {
-        Task<Citas> GetCitaByIdAsync(int IdCita);
+        Task<Cita> GetCitaByIdAsync(int IdCita);
 
-        Task<IReadOnlyList<Citas>> GetCitasAsync();
+        Task<IReadOnlyList<Cita>> GetCitasAsync();
     }
 }

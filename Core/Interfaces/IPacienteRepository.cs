@@ -9,7 +9,7 @@ namespace Core.Interfaces
 {
     public interface IPacienteRepository
     {
-        Task<Paciente> GetPacienteByIdAsync(int IdMedico);
+        Task<Paciente> GetPacienteByIdAsync(int IdPaciente);
 
         Task<IReadOnlyList<Paciente>> GetPacientesAsync();
     }

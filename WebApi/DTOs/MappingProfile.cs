@@ -12,8 +12,10 @@ namespace WebApi.DTOs
             // Por ejemplo, mapear "NombreMedico" en Medico a "Nombre" en MedicoDTO:
             // .ForMember(dest => dest.Nombre, opt => opt.MapFrom(src => src.NombreMedico));
             CreateMap<Medico, MedicoDTO>();
-            //.ForMember(m => m.NombreMedico, x => x.MapFrom(a => a.NombreMedico));
-
+            CreateMap<Paciente, PacienteDTO>();
+            CreateMap<Cita, CitasDTO>()
+                .ForMember(cd => cd.NombreMedico, m => m.MapFrom(c => c.Medico.NombreMedico))
+                .ForMember(cd => cd.NombrePaciente, m => m.MapFrom(c => c.Paciente.NombrePaciente));
         }
     }
 }

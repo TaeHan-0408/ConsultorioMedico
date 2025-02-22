@@ -10,7 +10,7 @@ namespace Core.Interfaces
 {
     public interface IGenericRepository<T> where T : ClaseBase
     {
-        Task<T> GetByIdAsync(int IdMedico);
+        Task<T> GetByIdAsync(int IdMedico, int IdPaciente, int IdCita);
 
         Task<IReadOnlyList<T>> GetAllAsync();
         Task<T> GetByIdWithSpec(ISpecification<T> spec);
@@ -18,5 +18,6 @@ namespace Core.Interfaces
         Task<IReadOnlyList<T>> GetAllWithSpec(ISpecification<T> spec);
 
         Task<int> CountAsync(ISpecification<T> spec);
+
     }
 }

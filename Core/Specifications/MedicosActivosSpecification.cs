@@ -25,13 +25,13 @@ namespace Core.Specifications
                 switch (medicoParams.Sort)
                 {
                     case "tarifaAscendente":
-                        AddOrderBy(p => p.Tarifa);
+                        AddOrderBy(m => m.Tarifa);
                         break;
                     case "tarifaDescendente":
-                        AddOrderByDescending(p => p.Tarifa);
+                        AddOrderByDescending(m => m.Tarifa);
                         break;
                     default:
-                        AddOrderBy(p => p.NombreMedico);
+                        AddOrderBy(m => m.NombreMedico);
                         break;
                 }
             }

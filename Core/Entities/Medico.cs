@@ -1,18 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.SqlTypes;
-using System.Diagnostics.Contracts;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿#nullable disable
 
 namespace Core.Entities
 {
     public class Medico : ClaseBase
     {
         public int IdMedico { get; set; }
-        public Medic Medic { get; set; }
         public string NombreMedico {  get; set; }
         public string ApellidoMedico { get; set; }
         public int EdadMedico { get; set; }
@@ -27,5 +19,6 @@ namespace Core.Entities
         public DateTime fechaDeCreacion { get; set; }
         public DateTime usuarioModificacion { get; set; }
         public DateTime fechaDeModificacion { get; set; }
+        public virtual ICollection<Cita> Citas { get; set; }   
     }
 }

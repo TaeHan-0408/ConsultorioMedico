@@ -1,8 +1,8 @@
-﻿#nullable disable
+﻿using Core.Entities;
 
-namespace Core.Entities
+namespace WebApi.DTOs
 {
-    public class Paciente : ClaseBase
+    public class PacienteDTO
     {
         public int IdPaciente { get; set; }
         public string NombrePaciente { get; set; }
@@ -13,17 +13,12 @@ namespace Core.Entities
         public string IdentificacionPaciente { get; set; }
         public string SeguroMedico { get; set; }
         public string DireccionPaciente { get; set; }
-        //public int AseguradoraPaciente { get; set; }
-        public DateTime FechaDeNacimientoPaciente { get; set; }
+        public int AseguradoraPaciente { get; set; }
+        public DateTime FechaNacimientoPaciente { get; set; }
         public bool EstatusPaciente { get; set; }
         public string CorreoPaciente { get; set; }
         public string ContactosPaciente { get; set; }
         public string CelularContactoPaciente { get; set; }
         public string CorreoContactoPaciente { get; set; }
-        public DateTime UsuarioCreacionPaciente { get; set; }
-        public DateTime FechaCreacionPaciente { get; set; }
-        public DateTime UsuarioModificacionPaciente { get; set; }
-        public DateTime FechaModificacionPaciente { get; set; }
-        public virtual ICollection<Cita> Citas { get; set; }
     }
 }

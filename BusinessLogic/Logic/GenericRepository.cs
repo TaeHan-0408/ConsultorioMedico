@@ -24,9 +24,9 @@ namespace BusinessLogic.Logic
             return await _context.Set<T>().ToListAsync();
         }
 
-        public async Task<T> GetByIdAsync(int IdMedico)
+        public async Task<T> GetByIdAsync(int IdMedico, int IdPaciente, int IdCita)
         {
-            return await _context.Set<T>().FindAsync(IdMedico);
+            return await _context.Set<T>().FindAsync(IdMedico, IdPaciente, IdCita);
         }
 
         public async Task<T> GetByIdWithSpec(ISpecification<T> spec)

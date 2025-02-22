@@ -19,16 +19,16 @@ namespace BusinessLogic.Logic
         }
         public async Task<Medico> GetMedicoByIdAsync(int IdMedico)
         {
-            return await _context.Medico.FindAsync(IdMedico);
-                            //.Include(c => c.Citas)
-                            //.FirstOrDefaultAsync(m => m.IdMedico == IdMedico);
+            return await _context.Medico
+                            .Include(c => c.Citas)
+                            .FirstOrDefaultAsync(m => m.IdMedico == IdMedico);
         }
 
         public async Task<IReadOnlyList<Medico>> GetMedicosAsync()
         {
-            return await _context.Medico.ToListAsync();
-                            //.Include(c => Citas)
-                            //.ToListAsync();
+            return await _context.Medico
+                            .Include(c => c.Citas)
+                            .ToListAsync();
         }
     }
 }

@@ -5,6 +5,7 @@ namespace WebApi.DTOs
     public class MedicoDTO
     {
         public int IdMedico { get; set; }
+        public Cita Citas { get; set; }
         public Medic Medic { get; set; }
         public string NombreMedico { get; set; }
         public string ApellidoMedico { get; set; }
